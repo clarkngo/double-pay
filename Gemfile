@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+gem 'simple_form', '~> 4.1'
+
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 gem 'geocoder', '~> 1.5', '>= 1.5.1'
