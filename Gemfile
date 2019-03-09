@@ -3,6 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+
+gem 'geocoder', '~> 1.5', '>= 1.5.1'
+
+
 gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'carrierwave',             '~> 1.3.1'
 
