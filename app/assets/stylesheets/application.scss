@@ -1,15 +1,85 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+//
+// This is a manifest file that'll be compiled into application.css, which will include all the files
+// listed below.
+//
+// Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+// vendor/assets/stylesheets directory can be referenced here using a relative path.
+//
+// You're free to add application-wide styles to this file and they'll appear at the bottom of the
+// compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+// files in this directory. Styles in this file should be added after the last require_* statement.
+// It is generally better to create a new file per style scope.
+//
+//= require_tree .
+//= require_self
+//
+@import "bootstrap";
+
+body {
+  background-image: url("bg.jpg");
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+.navbar {
+  background: image_url('notebook.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: blueviolet;
+  font-family: "Gill Sans Extrabold", monospace;
+  font-size: 30px;
+}
+
+.carousel {
+  border-radius: 55px 55px 55px 55px;
+  overflow: hidden;
+}
+
+.hero-image {
+  background-image: url("new_course.png");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.profile-image {
+  border-radius: 50%;
+}
+
+.center {
+  margin: auto;
+  width: 70%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.clear {
+  clear: both;
+}
