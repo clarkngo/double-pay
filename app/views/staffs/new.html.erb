@@ -1,0 +1,16 @@
+<br/>
+<br/>
+
+ <div class="booyah-box">
+  <h1>Staff Sign Up</h1>
+
+    <br/>
+
+    <%= simple_form_for @staff do |f| %>
+    <%= f.input :name, label: 'Name', class: 'form-control', 'aria-label': 'Large', 'aria-describedby': 'inputGroup-sizing-default' %>
+    <%= f.input :email, label: 'Email', class: 'form-control', 'aria-label': 'decription' %>
+    <%= f.input :phone, label: 'Phone', class: 'form-control', 'aria-label': 'decription' %>
+    <br/>
+    <%= f.submit "Submit!", class: 'btn-lg btn-primary' %>
+  <% end %>
+</div>
