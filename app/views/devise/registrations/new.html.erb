@@ -1,34 +1,70 @@
 <br/>
 <%= devise_error_messages! %>
-<div class="booyah-box col-10 offset-1">
-  <h2>Sign up</h2>
-  <br/>    
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<div class="container">
+  <h2 class="text-center">Create Account</h2>
+	<div class="row justify-content-center">
+		<div class="col-12 col-md-8 col-lg-6 pb-5">
+      
+      <!--Form with header-->
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-    
-    <div class="email">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control"  %>
-    </div>
-    <br/>
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control"  %>
-    </div>
-    <br/>
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password", class: "form-control" %>
-    </div>
-    <br/>    
-    <div class="actions">
-      <%= f.submit "Sign up", class: 'btn btn-primary' %>
-    </div>
-  <% end %>
-  <br/>
+        <!--Card-->
+        <div class="card border-primary rounded-0">
+          <div class="card-header p-0">
+            <div class="bg-info text-white text-center py-2">
+                <h3><i class="fa fa-envelope"></i> Account</h3>
+                <p class="m-0">Please fill in with your details</p>
+            </div>
+          </div>
 
-  <%= render "devise/shared/links" %>
+          <!--Body-->
+          <div class="card-body p-3">
+            <div class="email">
+              <div class="form-group">
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                    </div>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control"  %>
+                  </div>
+              </div>            
+            </div>
+
+            <div class="field">
+              <div class="form-group">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-lock text-info"></i></div>
+                  </div>
+                  <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "form-control"  %>              
+                </div>
+                <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %>     
+              </div>            
+            </div>
+                
+            <div class="field">
+              <div class="form-group">
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-lock text-info"></i></div>
+                  </div>
+                  <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password confirmation", class: "form-control"  %>
+                </div>
+              </div>            
+            </div>
+
+            <div class="text-center">
+              <%= f.submit "Sign up", class: 'btn btn-info btn-block rounded-0 py-2' %>
+            </div>               
+          </div>
+          <!--Body-->
+        </div>
+        <!--Card-->
+      <% end %>
+      <!--Form with header-->
+      <%= render "devise/shared/links" %>
+    </div>
+	</div>
 </div>
